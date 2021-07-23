@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shape
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval" >
+    <solid android:color="@color/border_file_icon_default" />
+    <stroke android:width="3dp"
+            android:color="@color/border_file_icon_default"/>
+    <size
+        android:width="@dimen/file_chooser_icon_height"
+        android:height="@dimen/file_chooser_icon_height"/>
+</shape>

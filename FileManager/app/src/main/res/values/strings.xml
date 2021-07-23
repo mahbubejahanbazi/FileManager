@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">File Manager</string>
+    <string name="filechooser_camera">Camera</string>
+    <string name="filechooser_documents">Documents</string>
+    <string name="filechooser_downloads">Downloads</string>
+    <string name="filechooser_movies">Movies</string>
+    <string name="filechooser_musics">Musics</string>
+    <string name="filechooser_pictures">Pictures</string>
+    <string name="filechooser_internal_storage">Internal Storage</string>
+    <string name="filechooser_caption">Files</string>
+</resources>

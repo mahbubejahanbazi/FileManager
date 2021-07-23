@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/file_manager_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/file_manager_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_height"
+        android:layout_alignParentTop="true"
+        android:background="@color/toolbar_color" />
+
+    <ImageButton
+        android:id="@+id/file_manager_up"
+        android:layout_width="@dimen/toolbar_height"
+        android:layout_height="@dimen/toolbar_height"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/toolbar_color"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_back" />
+
+    <TextView
+        android:id="@+id/file_manager_caption"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/toolbar_height"
+        android:layout_toEndOf="@+id/file_manager_up"
+        android:background="@color/toolbar_color"
+        android:paddingStart="@dimen/padding_left"
+        android:paddingTop="@dimen/padding_top"
+        android:text="@string/filechooser_caption"
+        android:textColor="@color/white"
+        android:textSize="@dimen/caption_text_size" />
+
+    <TextView
+        android:id="@+id/file_manager_filePath"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/file_manager_up"
+        android:paddingStart="5dp"
+        android:paddingTop="5dp"
+        android:paddingEnd="5dp"
+        android:textColor="@color/white" />
+
+    <ViewSwitcher
+        android:id="@+id/file_manager_switcher"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/file_manager_toolbar"
+        android:background="@color/white">
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TableLayout
+                android:id="@+id/file_manager_child1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:shrinkColumns="*"
+                android:stretchColumns="*">
+
+                <TableRow
+                    android:layout_marginTop="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout android:id="@+id/file_manager_camera">
+
+                        <ImageView
+                            android:id="@+id/file_manager_camera_icon"
+                            android:layout_width="@dimen/filechosser_image_height"
+                            android:layout_height="@dimen/filechosser_image_height"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/bg_file_chooser_camera"
+                            android:padding="@dimen/file_chooser_image_padding"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/ic_file_chooser_camera" />
+
+                        <TextView
+                            android:id="@+id/file_manager_camera_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/file_manager_camera_icon"
+                            android:layout_centerHorizontal="true"
+                            android:text="@string/filechooser_camera"
+                            android:textColor="@color/black"
+
+                            />
+                    </RelativeLayout>
+
+                    <RelativeLayout android:id="@+id/file_manager_document">
+
+                        <ImageView
+                            android:id="@+id/file_manager_document_icon"
+                            android:layout_width="@dimen/filechosser_image_height"
+                            android:layout_height="@dimen/filechosser_image_height"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/bg_file_chooser_document"
+                            android:padding="@dimen/file_chooser_image_padding"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/ic_file_chooser_document" />
+
+                        <TextView
+                            android:id="@+id/file_manager_document_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/file_manager_document_icon"
+                            android:layout_centerHorizontal="true"
+                            android:text="@string/filechooser_documents"
+                            android:textColor="@color/black" />
+                    </RelativeLayout>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp">
+
+                    <RelativeLayout
+
+                        android:id="@+id/file_manager_download">
+
+                        <ImageView
+                            android:id="@+id/file_manager_download_icon"
+                            android:layout_width="@dimen/filechosser_image_height"
+                            android:layout_height="@dimen/filechosser_image_height"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/bg_file_chooser_downloads"
+                            android:padding="@dimen/file_chooser_image_padding"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/ic_file_chooser_downloads" />
+
+                        <TextView
+                            android:id="@+id/file_manager_download_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/file_manager_download_icon"
+                            android:layout_centerHorizontal="true"
+                            android:text="@string/filechooser_downloads"
+                            android:textColor="@color/black" />
+                    </RelativeLayout>
+
+                    <RelativeLayout android:id="@+id/file_manager_movie">
+
+                        <ImageView
+                            android:id="@+id/file_manager_movie_icon"
+                            android:layout_width="@dimen/filechosser_image_height"
+                            android:layout_height="@dimen/filechosser_image_height"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/bg_file_chooser_movies"
+                            android:padding="@dimen/file_chooser_image_padding"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/ic_file_chooser_movies" />
+
+                        <TextView
+                            android:id="@+id/file_manager_movie_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/file_manager_movie_icon"
+                            android:layout_centerHorizontal="true"
+                            android:text="@string/filechooser_movies"
+                            android:textColor="@color/black" />
+                    </RelativeLayout>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp">
+
+                    <RelativeLayout
+
+                        android:id="@+id/file_manager_music">
+
+                        <ImageView
+                            android:id="@+id/file_manager_music_icon"
+                            android:layout_width="@dimen/filechosser_image_height"
+                            android:layout_height="@dimen/filechosser_image_height"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/bg_file_chooser_musics"
+                            android:padding="@dimen/file_chooser_image_padding"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/ic_file_chooser_musics" />
+
+                        <TextView
+                            android:id="@+id/file_manager_music_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/file_manager_music_icon"
+                            android:layout_centerHorizontal="true"
+                            android:text="@string/filechooser_musics"
+                            android:textColor="@color/black" />
+                    </RelativeLayout>
+
+                    <RelativeLayout android:id="@+id/file_manager_pictures">
+
+                        <ImageView
+                            android:id="@+id/file_manager_pictures_icon"
+                            android:layout_width="@dimen/filechosser_image_height"
+                            android:layout_height="@dimen/filechosser_image_height"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/bg_file_chooser_pictures"
+                            android:padding="@dimen/file_chooser_image_padding"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/ic_file_chooser_pictures" />
+
+                        <TextView
+                            android:id="@+id/file_manager_pictures_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/file_manager_pictures_icon"
+                            android:layout_centerHorizontal="true"
+                            android:text="@string/filechooser_pictures"
+                            android:textColor="@color/black" />
+                    </RelativeLayout>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="20dp">
+
+                    <RelativeLayout
+                        android:id="@+id/file_manager_internal_storage"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/file_manager_internal_storage_icon"
+                            android:layout_width="90dp"
+                            android:layout_height="90dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/bg_file_chooser_internal_storage"
+                            android:padding="@dimen/file_chooser_image_padding"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/ic_file_chooser_internal_storage" />
+
+                        <TextView
+                            android:id="@+id/file_manager_internal_storage_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/file_manager_internal_storage_icon"
+                            android:layout_centerHorizontal="true"
+                            android:text="@string/filechooser_internal_storage"
+                            android:textColor="@color/black" />
+                    </RelativeLayout>
+                </TableRow>
+
+
+            </TableLayout>
+        </ScrollView>
+
+        <RelativeLayout
+            android:id="@+id/file_manager_child2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ListView
+                android:id="@+id/file_manager_grid"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:divider="@null"
+                android:dividerHeight="0dp" />
+
+        </RelativeLayout>
+    </ViewSwitcher>
+</RelativeLayout>
