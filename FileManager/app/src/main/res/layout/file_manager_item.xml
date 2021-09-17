@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <ir.mjahanbazi.fileManager.MyCircleImage
+    <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/file_manager_item_icon"
         android:layout_width="40dp"
         android:layout_height="40dp"

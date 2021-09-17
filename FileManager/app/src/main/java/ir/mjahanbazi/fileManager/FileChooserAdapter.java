@@ -79,7 +79,7 @@ public class FileChooserAdapter extends MyListAdapter<File> {
         TagData tag = (TagData) convertView.getTag();
         if (file.isFile()) {
             if (FilenameUtils.isExtension(file.getName().toLowerCase(), extensions)) {
-                MyCache.image(file, tag.fileImage);
+                ImageCache.image(file, tag.fileImage);
                 tag.fileImage.setBackground(activity.getResources().getDrawable(R.drawable.bg_default));
                 tag.fileImage.setScaleType(CENTER_CROP);
                 tag.fileImage.setPadding(0, 0, 0, 0);
@@ -88,7 +88,7 @@ public class FileChooserAdapter extends MyListAdapter<File> {
                 tag.fileImage.setBackground(activity.getResources().getDrawable(R.drawable.bg_default_icon_music));
                 tag.fileImage.setPadding(dpi2Pixel(7), dpi2Pixel(7), dpi2Pixel(7), dpi2Pixel(7));
             } else if (FilenameUtils.isExtension(file.getName().toLowerCase(), new String[]{"mp4"})) {
-                MyCache.video(file, tag.fileImage);
+                ImageCache.video(file, tag.fileImage);
                 tag.fileImage.setBackground(activity.getResources().getDrawable(R.drawable.bg_default));
                 tag.fileImage.setScaleType(CENTER_CROP);
                 tag.fileImage.setPadding(0, 0, 0, 0);

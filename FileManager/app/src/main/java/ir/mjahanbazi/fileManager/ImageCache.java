@@ -17,16 +17,14 @@ import java.io.File;
 
 import static ir.mjahanbazi.fileManager.FileChooserUtils.activity;
 
-public class MyCache {
+public class ImageCache {
 
     private static ImageLoader imageLoader;
 
     private static final DisplayImageOptions displayImageOptionsCacheImage = new DisplayImageOptions.Builder()
-            //            .bitmapConfig(Bitmap.Config.ALPHA_8)
             .cacheInMemory(true)
             .cacheOnDisk(true)
             .delayBeforeLoading(50)
-            //            .imageScaleType(ImageScaleType.EXACTLY)
             .showImageForEmptyUri(R.drawable.ic_picture)
             .showImageOnFail(R.drawable.ic_picture)
             .showImageOnLoading(R.drawable.ic_picture)
@@ -34,7 +32,6 @@ public class MyCache {
 
 
     private static final DisplayImageOptions displayImageOptionsCacheVideo = new DisplayImageOptions.Builder()
-            //            .bitmapConfig(Bitmap.Config.ALPHA_8)
             .cacheInMemory(true)
             .cacheOnDisk(true)
             .delayBeforeLoading(100)
