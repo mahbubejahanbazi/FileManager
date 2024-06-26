@@ -11,7 +11,7 @@ A file manager that shows important folders and the internal storage on the home
 
 <p align="center">Request permission for accessing external storage</p>
 <p align="center">
-  <img src="https://github.com/peymanjahanbazi/FileManager/images/request_permission.jpg" />
+  <img src="https://github.com/peymanjahanbazi/FileManager/blob/main/images/request_permission.jpg" />
 </p>
 
 <p align="center">Accept or deny permission</p>
